@@ -1,0 +1,54 @@
+<?xml version = "1.0"?>
+<class>
+    <student rollno = "393">
+        <firstname>dinkar</firstname>
+        <lastname>kad</lastname>
+        <nickname>dinkar</nickname>
+        <marks>85</marks>
+    </student>
+
+    <student rollno = "493">
+        <firstname>Vaneet</firstname>
+        <lastname>Gupta</lastname>
+        <nickname>vinni</nickname>
+        <marks>95</marks>
+    </student>
+
+    <student rollno = "593">
+        <firstname>jasvir</firstname>
+        <lastname>singn</lastname>
+        <nickname>jazz</nickname>
+        <marks>90</marks>
+    </student>
+</class>
+
+
+<wesen>
+
+<kaiju id="gezora" >
+    <name>Gezora</name>
+    <alter>12000</alter>
+</kaiju>
+
+<kaiju id="gorosaurus">
+    <name>Gorosaurus</name>
+    <alter>7000</alter>
+</kaiju>
+
+<kaiju id="titanosaurus">
+    <name>Titanosaurus</name>
+    <alter>1975</alter>
+</kaiju>
+
+<kaiju id="mutti">
+    <name>Mothra</name>
+    <alter>6000</alter>
+</kaiju>
+<hund>
+    <zaehne>
+        <weisheitszahne>drei</weisheitszahne>
+    </zaehne>
+    <name>wolfi</name>
+</hund>
+
+</wesen>
