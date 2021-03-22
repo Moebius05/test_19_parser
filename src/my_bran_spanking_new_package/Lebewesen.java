@@ -23,7 +23,8 @@ abstract class Lebewesen {
     }
     public void die(String eini){
         System.out.println("The " + name + " has been killed by " + eini);
-    };
-    public abstract LinkedList eierlegen();
+    }
+
+    public abstract LinkedList<String> eierlegen();
 
 }
