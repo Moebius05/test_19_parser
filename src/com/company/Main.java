@@ -20,7 +20,7 @@ public class Main {
         LinkedList<Kaiju> kaijuLinkedList = new LinkedList<>();
         File quelldatei = null;
         try {
-            quelldatei = new File("C:\\Users\\paulf\\IdeaProjects\\test_19\\src\\my_bran_spanking_new_package\\kaijus.xml");
+            quelldatei = new File("kaijus.xml");
         } catch (Exception e) {
             e.fillInStackTrace();
         }
