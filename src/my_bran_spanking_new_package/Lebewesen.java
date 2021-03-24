@@ -22,7 +22,7 @@ abstract class Lebewesen {
         this.alter = alter;
     }
 
-    public void die(String eini){
+    public void die(String eini) {
         System.out.println("The " + name + " has been killed by " + eini);
     }
 

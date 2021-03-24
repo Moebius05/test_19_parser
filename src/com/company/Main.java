@@ -1,5 +1,6 @@
 package com.company;
 
+import my_bran_spanking_new_package.ConsoleOutputContentHandler;
 import my_bran_spanking_new_package.Kaiju;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -15,6 +16,7 @@ import java.util.LinkedList;
 
 public class Main {
     public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
+
         LinkedList<Kaiju> kaijuLinkedList = new LinkedList<>();
         File quelldatei = null;
         try {
