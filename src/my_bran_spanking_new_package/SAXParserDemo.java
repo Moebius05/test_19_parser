@@ -17,6 +17,8 @@ public class SAXParserDemo {
             SAXParserFactory meine_fabrik = SAXParserFactory.newInstance();
             SAXParser mein_SAXParser = meine_fabrik.newSAXParser();
             Kaijubehandler ich_behandle_Benutzer = new Kaijubehandler();
+//            ich_behandle_Benutzer.endDocument();
+//            ich_behandle_Benutzer.endDocument(3);
             mein_SAXParser.parse(datei_mit_kaijus, ich_behandle_Benutzer);
             kaijuHauptLinkedList = ich_behandle_Benutzer.getKaijuLinkedList();
         } catch (Exception e) {
@@ -34,7 +36,21 @@ class Kaijubehandler extends DefaultHandler {
     boolean alter = false;
     int kaiju_alter = 0;
     boolean extra = false;
+    String des_aktuellen_Knotens_name = "";
     private LinkedList<Kaiju> kaijuLinkedList = new LinkedList<>();
+
+    @Override
+    public void endDocument() {
+
+        System.out.println( des_aktuellen_Knotens_name);
+    }
+
+    public String endDocument(int eini) {
+        for (int i = 0; i < eini; i++) {
+            System.out.println("That's all folks!");
+        }
+        return "sans aucun sens";
+    }
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
@@ -48,6 +64,8 @@ class Kaijubehandler extends DefaultHandler {
 
     @Override
     public void characters(char ch[], int start, int length) throws SAXException {
+        des_aktuellen_Knotens_name = new String(ch, start, length);
+//        System.out.println("des_aktuellen_Knotens_name: \t" + des_aktuellen_Knotens_name);
         if (name) {
             kaiju_name = new String(ch, start, length);
             name = false;
@@ -62,6 +80,10 @@ class Kaijubehandler extends DefaultHandler {
 
         if (qName.equalsIgnoreCase("kaiju")) {
             kaijuLinkedList.add(new Kaiju(kaiju_name, kaiju_alter));
+        } else if ((qName.equalsIgnoreCase("name")) || (qName.equalsIgnoreCase("alter"))) {
+            System.out.println(" . ");
+        } else {
+            System.out.println("...");
         }
     }
 
