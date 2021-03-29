@@ -13,7 +13,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 
-//"C:\\Users\\paulf\\IdeaProjects\\test_19\\src\\my_bran_spanking_new_package\\kaijus.xml"
 public class DOM_parser {
     public static LinkedList<Kaiju> pars_DOM(String pfad) throws SAXException, IOException, ParserConfigurationException {
         LinkedList<Kaiju> aussi = new LinkedList<>();
