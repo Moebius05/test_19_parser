@@ -12,14 +12,12 @@ class Kaijubehandler extends DefaultHandler {
     String kaiju_name = "";
     boolean alter = false;
     int kaiju_alter = 0;
-    boolean extra = false;
     String des_aktuellen_Knotens_name = "";
     private final LinkedList<Kaiju> kaijuLinkedList = new LinkedList<>();
 
     @Override
     public void endDocument() {
-
-        System.out.println( des_aktuellen_Knotens_name);
+        System.out.println(des_aktuellen_Knotens_name);
     }
 
     public String endDocument(int eini) {
@@ -31,8 +29,7 @@ class Kaijubehandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        if (qName.equalsIgnoreCase("kaiju")) {
-        } else if (qName.equalsIgnoreCase("name")) {
+        if (qName.equalsIgnoreCase("name")) {
             name = true;
         } else if (qName.equalsIgnoreCase("alter")) {
             alter = true;
@@ -40,9 +37,8 @@ class Kaijubehandler extends DefaultHandler {
     }
 
     @Override
-    public void characters(char ch[], int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length) {
         des_aktuellen_Knotens_name = new String(ch, start, length);
-//        System.out.println("des_aktuellen_Knotens_name: \t" + des_aktuellen_Knotens_name);
         if (name) {
             kaiju_name = new String(ch, start, length);
             name = false;
@@ -53,8 +49,7 @@ class Kaijubehandler extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
-
+    public void endElement(String uri, String localName, String qName) {
         if (qName.equalsIgnoreCase("kaiju")) {
             kaijuLinkedList.add(new Kaiju(kaiju_name, kaiju_alter));
         } else if ((qName.equalsIgnoreCase("name")) || (qName.equalsIgnoreCase("alter"))) {
