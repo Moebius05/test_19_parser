@@ -16,10 +16,9 @@ public class Alien extends my_bran_spanking_new_package.Lebewesen {
     }
 
     public void die(){
-        System.out.printf("The " + this.name + " cannot die.");
+        System.out.println("The " + this.name + " cannot die.");
     }
     public LinkedList<String> eierlegen(){
-        LinkedList<String> aussi =  new LinkedList<String>();
-        return aussi;
+        return new LinkedList<>();
     }
 }

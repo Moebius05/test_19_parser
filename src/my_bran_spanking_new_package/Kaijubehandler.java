@@ -1,7 +1,6 @@
 package my_bran_spanking_new_package;
 
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.LinkedList;
@@ -28,7 +27,7 @@ class Kaijubehandler extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) {
         if (qName.equalsIgnoreCase("name")) {
             name = true;
         } else if (qName.equalsIgnoreCase("alter")) {

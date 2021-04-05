@@ -53,4 +53,3 @@ public class DOM_parser {
         return aussi;
     }
 }
-

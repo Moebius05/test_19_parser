@@ -1,5 +1,4 @@
-<?xml version = "1.0"?>
-<wesen>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wesen>
     <kuh>
         <name>cow</name>
         <alter>3</alter>
@@ -27,4 +26,7 @@
         </zaehne>
         <name>wolfi</name>
     </hund>
-</wesen>
+<kaiju>
+<name>Zumpfsti</name>
+<alter>17</alter>
+</kaiju></wesen>

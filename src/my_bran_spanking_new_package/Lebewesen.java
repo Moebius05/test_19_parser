@@ -6,8 +6,8 @@ import java.util.LinkedList;
  * life is all we are interested in
  */
 abstract class Lebewesen {
-    String name;
-    int alter;
+    final String name;
+    final int alter;
 
     public String getName() {
         return name;
